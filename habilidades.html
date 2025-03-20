@@ -1,11 +1,46 @@
-<section id="habilidades-section" class="section-container">
-  <div class="section-image">
-    <img src="estudios-trabajar-en-informatica.jpg" alt="Work Image"
-         onclick="changeBackgroundColor(1, 'habilidades-section')"
-         style="cursor:pointer; max-width:400px; border-radius:10px;">
+<section 
+  id="habilidades-section" 
+  class="section-container" 
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #EAF1EB;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-wrap: wrap;
+    gap: 20px;
+  "
+>
+  <div class="section-image" style="flex:1; min-width:300px; text-align:center;">
+    <img 
+      src="estudios-trabajar-en-informatica.jpg" 
+      alt="Work Image"
+      onclick="changeBackgroundColor(1, 'habilidades-section')"
+      style="
+        cursor:pointer;
+        max-width:100%;
+        border-radius:10px;
+        transition:transform 0.3s ease;
+      "
+    >
   </div>
-  <div class="section-text" style="max-width: 500px; padding-left: 40px;">
-    <p><strong>Adan Condori Callisaya</strong> cuenta con experiencia en el desarrollo y diseño de interfaces web y móviles...</p>
+
+  <div class="section-text" style="flex:1; min-width:300px; line-height:1.6;">
+    <p><strong>Adan Condori Callisaya</strong> cuenta con experiencia en el desarrollo y diseño de interfaces web y móviles,
+      enfocándose en la creación de experiencias de usuario intuitivas y eficientes.</p>
+        
+    <p>Ha trabajado en:</p>
+    <ul>
+      <li>Diseño y mantenimiento de aplicaciones bancarias y empresariales.</li>
+      <li>Navegación fluida y óptima interacción con el usuario.</li>
+      <li>Desarrollo de interfaces modernas, adaptativas y funcionales.</li>
+    </ul>
+        
     <p><strong>Tecnologías dominadas:</strong></p>
     <ul>
       <li>Vue.js</li>
@@ -13,7 +48,13 @@
       <li>Android Studio</li>
       <li>iOS</li>
     </ul>
-    <!-- ... y así con el resto de tu contenido ... -->
+        
+    <p>Además, conocimientos en:</p>
+    <ul>
+      <li><strong>Diseño responsive</strong>: adaptabilidad a diversos dispositivos.</li>
+      <li><strong>Usabilidad y UX</strong>: soluciones atractivas y accesibles.</li>
+      <li><strong>Integración con APIs y notificaciones push</strong>.</li>
+    </ul>
   </div>
 </section>
 
