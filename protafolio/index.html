@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación y Certificaciones</title>
+    <title>Hom Sweet Hom Clone</title>
     <style>
         /* Estilo general */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f7f3;
+            background: linear-gradient(135deg, #f0f7f3, #e1f3e7);
             scroll-behavior: smooth;
             animation: fadeIn 1s ease-in;
         }
@@ -22,7 +22,6 @@
                 opacity: 1;
             }
         }
-
         /* Navbar */
         .navbar {
             background-color: #456B53;
@@ -74,47 +73,50 @@
             }
         }
 
-        /* Sección principal */
-        .section-container {
+        /* Contenedor de la página */
+        .container {
             display: flex;
             align-items: center;
             justify-content: center;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 80px auto;
-            background-color: #EAF1EB;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.5s ease-in-out;
         }
-        .section-container:hover {
+        .container:hover {
             transform: scale(1.02);
         }
-        .section-image img {
+        .image-section img {
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             border-radius: 10px;
             transition: transform 0.3s ease;
             cursor: pointer;
         }
-        .section-image img:hover {
+        .image-section img:hover {
             transform: scale(1.1);
         }
-        .section-text {
+        .text-section, .work-text-section {
+            background-color: #EAF1EB;
+            padding: 40px;
             max-width: 500px;
-            padding-left: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .section-text p {
+        .text-section h1 {
+            color: #BF7145;
+            font-size: 28px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .text-section h1:hover {
+            color: #D3845C;
+        }
+        .text-section p, .work-text-section p {
             color: #456B53;
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
-        .section-text strong {
-            color: #BF7145;
-        }
-
-        /* Estilo de botones */
-        .section-text button {
+        .text-section button {
             background-color: #D3845C;
             color: white;
             padding: 10px 20px;
@@ -125,12 +127,31 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .section-text button:hover {
+        .text-section button:hover {
             background-color: #BF7145;
             transform: scale(1.1);
         }
 
-        /* Fotografía y créditos */
+        /* Sección adicional */
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 60px auto;
+            background-color: #EAF1EB;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .image-section img, .section-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .section-text {
+            max-width: 500px;
+            padding-left: 40px;
+        }
         .photo-credit {
             font-size: 14px;
             font-style: italic;
@@ -147,7 +168,6 @@
         .color-change-3 {
             background-color: #d1f0c1;
         }
-
     </style>
 </head>
 <body>
@@ -160,37 +180,24 @@
         <a href="educacion.html">EDUCACIÓN Y CERTIFICACIONES</a>
         <a href="contacto.html">CONTACTO</a>
     </div>
-
-    <section id="work" class="section-container">
-        <div class="section-image">
-            <img src="icono-diploma-posgrado-vector-plano-estudio-examen-tesis-tapa-aislada_98396-57-removebg-preview.png" alt="Educación y Certificaciones" onclick="changeBackgroundColor(1)">
+    <div id="home" class="container">
+        <div class="image-section">
+            <img src="perfil-cv.png" alt="Adan Condori" onclick="changeBackgroundColor(1)">
         </div>
-        <div class="section-text">
-            <p>• <strong>Dirección Estratégica en Ingeniería de Software (Cursando Actualmente)</strong><br>
-                Universidad Autónoma Gabriel René Moreno, desde Octubre 2019<br>
-                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
-              
-
-            <p>• <strong>Educación superior y Tecnología (Diplomado)</strong><br>
-                Universidad Autónoma Gabriel René Moreno, desde Julio 2018<br>
-                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
-              
-
-            <p>• <strong>Inglés (Técnico Avanzado)</strong><br>
-                Centro Boliviano Americano, desde Agosto 2013 hasta Noviembre 2015<br>
-                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
-              
-
-            <p>• <strong>Ingeniería en Informática (Licenciatura)</strong><br>
-                Universidad Autónoma Gabriel René Moreno, desde Febrero 2008 hasta Marzo 2015<br>
-                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
-              
-
-            <p>• <strong>Bachiller en Humanidades</strong><br>
-                Hernando Siles Reyes, desde Febrero 2003 hasta Noviembre 2007<br>
-                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
+        <div class="text-section">
+            <h1>Hola! Soy Adan Condori Callisaya.</h1>
+            <p>Un <strong>Ingeniero en Informática</strong> con amplia experiencia en
+                 desarrollo de software, arquitectura tecnológica y 
+                 liderazgo de equipos. Especializado en la 
+                 planificación y mantenimiento de aplicaciones web 
+                 y móviles, ha trabajado en proyectos de alto impacto
+                  en el sector financiero y empresarial. Apasionado 
+                  por la innovación y la optimización de procesos, 
+                  combina su expertise técnico con una gestión 
+                  eficiente de proyectos bajo metodologías ágiles.</p>
+            <button><a href="habilidades.html"> Más sobre mi</a></button>
         </div>
-    </section>
+    </div>
 
     <script>
         // JavaScript para mostrar/ocultar el menú
@@ -199,35 +206,39 @@
             navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
         });
 
-        // Función para cambiar el color de fondo al hacer clic en las imágenes
-        function changeBackgroundColor(colorNumber) {
-            var container = document.getElementById("work");
-            if (colorNumber === 1) {
-                container.className = "section-container color-change-1";
-            } else if (colorNumber === 2) {
-                container.className = "section-container color-change-2";
-            } else if (colorNumber === 3) {
-                container.className = "section-container color-change-3";
+        // Animación suave al hacer scroll
+        window.addEventListener('scroll', function() {
+            let navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = "#3C5A46"; // Cambiar color al hacer scroll
+            } else {
+                navbar.style.backgroundColor = "#456B53"; // Color original
             }
-        }
+        });
 
-        // Función para cargar contenido dinámico de la educación y certificaciones
-        function loadEducation() {
+        // Función para cargar dinámicamente el contenido de cada sección
+        function loadSection(section) {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'educacion-certificaciones-content.html', true);  // Cambia la URL según el archivo con tu contenido
+            xhr.open('GET', section + '.html', true);
             xhr.onload = function() {
                 if (xhr.status === 200) {
-                    document.getElementById('work').innerHTML = xhr.responseText;
+                    document.getElementById('home').innerHTML = xhr.responseText;
                 }
             };
             xhr.send();
         }
 
-        // Llamamos a la función para cargar el contenido al cargar la página
-        window.onload = function() {
-            loadEducation();
-        };
+        // Función para cambiar el color de fondo al hacer clic en las imágenes
+        function changeBackgroundColor(colorNumber) {
+            var container = document.getElementById("home");
+            if (colorNumber === 1) {
+                container.className = "container color-change-1";
+            } else if (colorNumber === 2) {
+                container.className = "container color-change-2";
+            } else if (colorNumber === 3) {
+                container.className = "container color-change-3";
+            }
+        }
     </script>
 </body>
 </html>
-
