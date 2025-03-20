@@ -1,238 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia Laboral</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f7f3;
-            scroll-behavior: smooth;
-        }
-        .navbar {
-            background-color: #456B53;
-            padding: 15px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            transition: background-color 0.3s ease;
-        }
-        .navbar a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        .navbar a:hover {
-            color: #d9d9d9;
-            transform: scale(1.1);
-        }
-        #menu-btn {
-            display: none;
-            font-size: 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: white;
-            transition: transform 0.3s ease;
-        }
-        #menu-btn:hover {
-            transform: rotate(90deg);
-        }
-        @media (max-width: 768px) {
-            .navbar {
-                display: none;
-                flex-direction: column;
-                background-color: #456B53;
-                transition: display 0.5s ease;
-            }
-            #menu-btn {
-                display: block;
-                position: fixed;
-                top: 15px;
-                right: 15px;
-            }
-        }
-        .section-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 1000px;
-            margin: 80px auto;
-            background-color: #EAF1EB;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .section-container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        .section-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .section-image img:hover {
-            transform: scale(1.05);
-        }
-        .section-text {
-            max-width: 500px;
-            padding-left: 40px;
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
+<section 
+  id="work" 
+  class="section-container" 
+  style="
+    display: flex;
+    gap:20px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content:center;
+    max-width:1000px;
+    margin:auto;
+    background-color:#EAF1EB;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  "
+>
+  <div class="section-image" style="flex:1; min-width:300px; text-align:center;">
+    <img 
+      src="png-transparent-computer-software-ibm-business-software-developer-team-comp.png" 
+      alt="Experiencia Laboral" 
+      onclick="changeBackgroundColor(1, 'work')"
+      style="
+        cursor:pointer;
+        max-width:100%;
+        border-radius:10px;
+        transition:transform 0.3s ease;
+      "
+    >
+  </div>
 
-        /* Colores de fondo de las reacciones */
-        .color-change-1 {
-            background-color: #f5a5d0;
-        }
-        .color-change-2 {
-            background-color: #e1c8e1;
-        }
-        .color-change-3 {
-            background-color: #d1f0c1;
-        }
-    </style>
-</head>
-<body>
-    <!-- Botón de menú hamburguesa -->
-    <button id="menu-btn">☰</button>
-    <div class="navbar" id="navbar">
-        <a href="index.html">PRINCIPAL</a>
-        <a href="habilidades.html">HABILIDADES</a>
-        <a href="experiencia.html">EXPERIENCIA LABORAL</a>
-        <a href="educacion.html">EDUCACIÓN Y CERTIFICACIONES</a>
-        <a href="contacto.html">CONTACTO</a>
-    </div>
-    <section id="work" class="section-container">
-        <div class="section-image">
-            <img src="png-transparent-computer-software-ibm-business-software-developer-team-comp.png" alt="Experiencia Laboral" onclick="changeBackgroundColor(1)">
-        </div>
-        <div class="section-text">
-            <p>• <strong>Jefe de Desarrollo Tecnológico</strong> (Diciembre 2019 - Presente)<br>
-                Banco Fassil S.A. - Santa Cruz de la Sierra, Bolivia</p>
-            <ul>
-                <li>Planificar, monitorear, organizar y dirigir a los equipos de desarrollo.</li>
-                <li>Coordinar y definir Arquitectura de Software de los proyectos.</li>
-                <li>Generar reportes de los resultados de los proyectos y equipos.</li>
-                <li><strong>Desarrollo:</strong>
-                    <ul>
-                        <li>Mantenimiento de la App Banca Móvil Fassil (Android, iOS).</li>
-                        <li>Desarrollo de la nueva App Banca Móvil Fassil (Híbrida).</li>
-                        <li>Mantenimiento de FassilNet Web.</li>
-                        <li>Mantenimiento de APIs.</li>
-                    </ul>
-                </li>
-                <li><strong>Cantidad de Personas a Cargo:</strong> 22</li>
-            </ul><br>
+  <div class="section-text" style="flex:2; min-width:300px;">
+    <p><strong>Jefe de Desarrollo Tecnológico</strong> (Dic 2019 - Presente)<br>
+      Banco Fassil S.A. - Santa Cruz, Bolivia</p>
+    <ul>
+      <li>Planificar y dirigir equipos de desarrollo (22 personas).</li>
+      <li>Definir arquitectura de software.</li>
+      <li>Mantenimiento de apps móviles, FassilNet Web, APIs.</li>
+    </ul>
+    <hr>
 
-            <p>• <strong>Analista Senior en Desarrollo Tecnológico</strong> (Diciembre 2017 - Noviembre 2019)<br>
-                Banco Fassil S.A. - Santa Cruz de la Sierra, Bolivia</p>
-            <ul>
-                <li>Desarrollo de mantenimiento (Python, Android).</li>
-                <li>Desarrollo de seguimiento para supervisores (Android).</li>
-                <li>Desarrollo de ChatBot (Python - Django, Pyramid, Flask).</li>
-                <li>Sistemas a medida en Ruby on Rails (RoR).</li>
-                <li>Desarrollo FrontEnd con Vue.js.</li>
-                <li>Actualización de App Banca Móvil en iOS y Android.</li>
-                <li>Scrum Master.</li>
-                <li><strong>Cantidad de Personas a Cargo:</strong> 4</li>
-            </ul><br>
+    <p><strong>Analista Senior en Desarrollo Tecnológico</strong> (Dic 2017 - Nov 2019)</p>
+    <ul>
+      <li>Desarrollo Python, Android.</li>
+      <li>Desarrollo ChatBot (Django, Pyramid, Flask).</li>
+      <li>Scrum Master.</li>
+      <li>4 personas a cargo.</li>
+    </ul>
+    <hr>
 
-            <p>• <strong>Ingeniero de Software</strong> (Enero 2016 - Noviembre 2017)<br>
-                Ticketeg S.R.L. - Santa Cruz, Bolivia</p>
-            <ul>
-                <li>Desarrollo de Sistemas a medida en Ruby on Rails (RoR).</li>
-                <li>Desarrollo de Sistemas para inmobiliarias y multinivel (RoR).</li>
-                <li>Desarrollo de Sistemas de mensajes masivos SMS (RoR).</li>
-                <li>Desarrollo de Sistemas de modular con gemas (RoR).</li>
-                <li>Desarrollo de Sistemas para parqueos (RoR).</li>
-                <li>Desarrollo de aplicaciones móviles (Android Studio).</li>
-                <li>Desarrollo de sistema móvil para ingreso de partidos con lectura QR (Android Studio).</li>
-                <li><strong>Cantidad de Personas a Cargo:</strong> 2</li>
-            </ul><br>
-
-            <p>• <strong>Ingeniero de Software</strong> (Enero 2016 - Noviembre 2017)<br>
-                Qubo Technologies - Santa Cruz de la Sierra, Bolivia</p>
-            <ul>
-                <li>Desarrollo de Sistemas a medida en Ruby on Rails (RoR).</li>
-                <li><strong>Cantidad de Personas a Cargo:</strong> 2</li>
-            </ul><br>
-
-            <p>• <strong>Desarrollo de Sistemas a Medida</strong> (Noviembre 2014 - Noviembre 2015)<br>
-                V8 S.R.L. - Santa Cruz de la Sierra, Bolivia</p>
-            <ul>
-                <li>Desarrollo de Sistemas a medida en plataformas Web y Móviles.</li>
-                <li>Software a medida en Android e iOS.</li>
-                <li>Uso de YII Framework.</li>
-                <li>Android Studio: fragments, notificaciones Firebase, mapas, SMS, redes sociales, juegos básicos en 2D, API Restful, ORM Sugar SQLite.</li>
-                <li>iOS: ABM, API Restful, Base de Datos SQLite.</li>
-            </ul><br>
-
-            <p>• <strong>Desarrollo de Aplicaciones Móviles</strong> (Noviembre 2013 - Diciembre 2014)<br>
-                Zoom Bolivia - Santa Cruz de la Sierra, Bolivia</p>
-            <ul>
-                <li>Desarrollo de página web con PHP, HTML, jQuery.</li>
-                <li>Desarrollo de aplicaciones móviles Android (fragments, notificaciones Firebase, mapas, SMS, redes sociales, juegos 2D, API Restful, ORM Sugar SQLite).</li>
-                <li><strong>Cantidad de Personas a Cargo:</strong> 1</li>
-            </ul><br>
-
-            <p>• <strong>Auxiliar de Laboratorio</strong> (Febrero 2013 - Diciembre 2013)<br>
-                Universidad Autónoma Gabriel René Moreno - Santa Cruz de la Sierra, Bolivia</p>
-            <ul>
-                <li>Encargado del mantenimiento y administración de 45 máquinas.</li>
-                <li>Instalación y capacitación de programas como SQL Server, GIS, etc.</li>
-                <li>Mantenimiento y reparación de computadoras.</li>
-                <li><strong>Cantidad de Personas a Cargo:</strong> 3</li>
-            </ul><br>
-
-            <p>• <strong>Auxiliar de Cátedra</strong> (Marzo 2012 - Diciembre 2012)<br>
-                Universidad Autónoma Gabriel René Moreno - Santa Cruz de la Sierra, Bolivia</p>
-            <ul>
-                <li>Colaboración en cursos como introducción a la programación y microprocesadores.</li>
-                <li><strong>Cantidad de Personas a Cargo:</strong> 0</li>
-            </ul><br>
-        </div>
-    </section>
-
-    <script>
-        // JavaScript para mostrar/ocultar el menú
-        document.getElementById("menu-btn").addEventListener("click", function () {
-            let navbar = document.getElementById("navbar");
-            navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
-        });
-
-        // Función para cambiar el color de fondo al hacer clic en las imágenes
-        function changeBackgroundColor(colorNumber) {
-            var container = document.getElementById("work");
-            if (colorNumber === 1) {
-                container.className = "section-container color-change-1";
-            } else if (colorNumber === 2) {
-                container.className = "section-container color-change-2";
-            } else if (colorNumber === 3) {
-                container.className = "section-container color-change-3";
-            }
-        }
-    </script>
-</body>
-</html>
+    <!-- Repite el formato con el resto de tu experiencia -->
+    <!-- ... -->
+  </div>
+</section>
