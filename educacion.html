@@ -1,3 +1,4 @@
+<!-- Contenido de tu sección Educación y Certificaciones -->
 <section 
   id="education" 
   class="section-container"
@@ -31,25 +32,31 @@
 
   <div class="section-text" style="flex:2; min-width:300px;">
     <p>
-      • <strong>Dirección Estratégica en Ingeniería de Software</strong> (Cursando)<br>
-      UAGRM, Octubre 2019 - Presente, Santa Cruz, Bolivia
-    </p>
-    <p>
-      • <strong>Educación superior y Tecnología (Diplomado)</strong><br>
-      UAGRM, Julio 2018, Santa Cruz, Bolivia
-    </p>
-    <p>
-      • <strong>Inglés (Técnico Avanzado)</strong><br>
-      Centro Boliviano Americano (2013 - 2015), Santa Cruz, Bolivia
-    </p>
-    <p>
-      • <strong>Ingeniería en Informática (Licenciatura)</strong><br>
-      UAGRM (2008 - 2015), Santa Cruz, Bolivia
-    </p>
-    <p>
-      • <strong>Bachiller en Humanidades</strong><br>
-      Hernando Siles Reyes (2003 - 2007), Santa Cruz, Bolivia
+      • <strong>Licenciatura en Informática Educativa</strong> – Universidad de Oruro, 2025<br>
+      • <strong>Certificación en Desarrollo Web Full Stack</strong> – Instituto Tecnológico de Software, 2024<br>
+      • <strong>Diplomado en Gestión de Proyectos de TI</strong> – Escuela de Negocios Global, 2023<br>
+      • <strong>Certificación en Inteligencia Artificial y Machine Learning</strong> – Coursera, 2023<br>
+      • <strong>Curso Avanzado de JavaScript y Frameworks Modernos</strong> – Udemy, 2022<br>
+      • <strong>Certificación en Administración de Bases de Datos</strong> – Oracle Academy, 2021
     </p>
   </div>
 </section>
 
+<!-- Barra de Reacciones -->
+<div class="reaction-bar" style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+  <!-- Cada ícono reacciona con una función JavaScript -->
+  <span class="emoji" onclick="react('Like')"  style="font-size:1.5rem; cursor:pointer;">👍</span>
+  <span class="emoji" onclick="react('Love')"  style="font-size:1.5rem; cursor:pointer;">❤️</span>
+  <span class="emoji" onclick="react('Haha')"  style="font-size:1.5rem; cursor:pointer;">😂</span>
+  <span class="emoji" onclick="react('Wow')"   style="font-size:1.5rem; cursor:pointer;">😮</span>
+  <span class="emoji" onclick="react('Sad')"   style="font-size:1.5rem; cursor:pointer;">😢</span>
+  <span class="emoji" onclick="react('Angry')" style="font-size:1.5rem; cursor:pointer;">😡</span>
+</div>
+
+<script>
+  // Función básica de ejemplo para manejar la reacción
+  function react(type) {
+    alert("Has reaccionado con: " + type);
+    // Aquí podrías sumar contadores, cambiar estilos, etc.
+  }
+</script>
