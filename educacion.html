@@ -1,19 +1,19 @@
-<!-- Contenido de tu sección Educación y Certificaciones -->
+<!-- Sección principal de Educación y Certificaciones -->
 <section 
   id="education" 
   class="section-container"
   style="
     display: flex;
-    gap:20px;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:center;
-    max-width:1000px;
-    margin:auto;
-    background-color:#EAF1EB;
-    padding:40px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #EAF1EB;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   "
 >
   <div class="section-image" style="flex:1; min-width:300px; text-align:center;">
@@ -31,32 +31,73 @@
   </div>
 
   <div class="section-text" style="flex:2; min-width:300px;">
+    <h2>Educación y Certificaciones</h2>
     <p>
-      • <strong>Licenciatura en Informática Educativa</strong> – Universidad de Oruro, 2025<br>
-      • <strong>Certificación en Desarrollo Web Full Stack</strong> – Instituto Tecnológico de Software, 2024<br>
-      • <strong>Diplomado en Gestión de Proyectos de TI</strong> – Escuela de Negocios Global, 2023<br>
-      • <strong>Certificación en Inteligencia Artificial y Machine Learning</strong> – Coursera, 2023<br>
-      • <strong>Curso Avanzado de JavaScript y Frameworks Modernos</strong> – Udemy, 2022<br>
-      • <strong>Certificación en Administración de Bases de Datos</strong> – Oracle Academy, 2021
+      A lo largo de mi carrera profesional, he obtenido diversas certificaciones y títulos académicos:
     </p>
+    <ul>
+      <li><strong>Licenciatura en Informática Educativa</strong> — Universidad de Oruro, 2025</li>
+      <li><strong>Certificación en Desarrollo Web Full Stack</strong> — Instituto Tecnológico de Software, 2024</li>
+      <li><strong>Diplomado en Gestión de Proyectos de TI</strong> — Escuela de Negocios Global, 2023</li>
+      <li><strong>Certificación en Inteligencia Artificial y Machine Learning</strong> — Coursera, 2023</li>
+      <li><strong>Curso Avanzado de JavaScript y Frameworks Modernos</strong> — Udemy, 2022</li>
+      <li><strong>Certificación en Administración de Bases de Datos</strong> — Oracle Academy, 2021</li>
+    </ul>
   </div>
 </section>
 
 <!-- Barra de Reacciones -->
-<div class="reaction-bar" style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
-  <!-- Cada ícono reacciona con una función JavaScript -->
-  <span class="emoji" onclick="react('Like')"  style="font-size:1.5rem; cursor:pointer;">👍</span>
-  <span class="emoji" onclick="react('Love')"  style="font-size:1.5rem; cursor:pointer;">❤️</span>
-  <span class="emoji" onclick="react('Haha')"  style="font-size:1.5rem; cursor:pointer;">😂</span>
-  <span class="emoji" onclick="react('Wow')"   style="font-size:1.5rem; cursor:pointer;">😮</span>
-  <span class="emoji" onclick="react('Sad')"   style="font-size:1.5rem; cursor:pointer;">😢</span>
-  <span class="emoji" onclick="react('Angry')" style="font-size:1.5rem; cursor:pointer;">😡</span>
+<div class="reaction-bar" style="
+  display:flex; 
+  gap:10px; 
+  justify-content:center; 
+  margin-top:20px;
+">
+  <!-- Cada span tiene un data-reaction distinto y la clase "emoji" -->
+  <span class="emoji" data-reaction="Like"  onclick="react('Like')"
+        style="font-size:1.5rem; cursor:pointer;">👍</span>
+  <span class="emoji" data-reaction="Love"  onclick="react('Love')"
+        style="font-size:1.5rem; cursor:pointer;">❤️</span>
+  <span class="emoji" data-reaction="Haha"  onclick="react('Haha')"
+        style="font-size:1.5rem; cursor:pointer;">😂</span>
+  <span class="emoji" data-reaction="Wow"   onclick="react('Wow')"
+        style="font-size:1.5rem; cursor:pointer;">😮</span>
+  <span class="emoji" data-reaction="Sad"   onclick="react('Sad')"
+        style="font-size:1.5rem; cursor:pointer;">😢</span>
+  <span class="emoji" data-reaction="Angry" onclick="react('Angry')"
+        style="font-size:1.5rem; cursor:pointer;">😡</span>
 </div>
 
+<!-- Script de selección de reacciones -->
 <script>
-  // Función básica de ejemplo para manejar la reacción
+  // Variable global para almacenar el elemento que está seleccionado
+  let selectedEmoji = null;
+
   function react(type) {
-    alert("Has reaccionado con: " + type);
-    // Aquí podrías sumar contadores, cambiar estilos, etc.
+    // 1. Si había un emoji seleccionado antes, le quitamos la clase 'selected'
+    if (selectedEmoji) {
+      selectedEmoji.classList.remove('selected');
+    }
+
+    // 2. Buscamos el span que tenga el data-reaction con el nuevo tipo
+    const newSelection = document.querySelector(`.emoji[data-reaction="${type}"]`);
+    
+    // 3. Le agregamos la clase 'selected'
+    if (newSelection) {
+      newSelection.classList.add('selected');
+      selectedEmoji = newSelection;
+    }
+
+    // (Opcional) Muestra un mensaje o haz otra acción
+    console.log("Has reaccionado con:", type);
   }
 </script>
+
+<!-- Estilos adicionales para mostrar cuál se selecciona -->
+<style>
+  /* Puedes ajustarlos a tu gusto */
+  .emoji.selected {
+    transform: scale(1.3);
+    color: #007BFF; /* Por ejemplo, un color azul para la reacción seleccionada */
+  }
+</style>
